@@ -1,6 +1,7 @@
 import requests
 import telegram as tel
 import asyncio
+import traceback
 try:
     # server check
     uri = "https://www.sysout.co.kr";
@@ -26,5 +27,6 @@ except:
     asyncio.run(
         bot.sendMessage(chat_id=chat_id, text=f"Alive checker 실행 오류")
     )
-    print("Alive checker error)
+    print("Alive checker error")
+    traceback.print_exc()
     exit(-2)

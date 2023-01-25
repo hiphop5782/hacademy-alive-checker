@@ -1,7 +1,6 @@
 import requests
 import telegram as tel
 import asyncio
-import traceback
 import sys
 
 def main():
@@ -31,7 +30,6 @@ def main():
             bot.sendMessage(chat_id=chat_id, text=f"Alive checker 실행 오류")
         )
         print("Alive checker error")
-        traceback.print_exc()
         raise
 
 if __name__ == "__main__":

@@ -1,7 +1,8 @@
 # server check
 import requests
 
-response = requests.get("https://www.sysout.co.kr")
+uri = "https://www.sysout.co.kr";
+response = requests.get(uri, verify=False)
 if response.status_code == 200:
     print("Server working now")
     exit(0)

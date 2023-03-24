@@ -17,7 +17,7 @@ def main():
         chat_id = 5492413521
 
         asyncio.run(
-            bot.sendMessage(chat_id=chat_id, text=f"서버 상태 : {response.status_code}")
+            bot.sendMessage(chat_id=chat_id, text=f"HTTP 서버 상태 : {response.status_code}")
         )
         print("Server not working now")
         return False
@@ -27,7 +27,7 @@ def main():
         chat_id = 5492413521
 
         asyncio.run(
-            bot.sendMessage(chat_id=chat_id, text=f"Alive checker 실행 오류")
+            bot.sendMessage(chat_id=chat_id, text=f"HTTP 서버 오류 발생")
         )
         print("Alive checker error")
         raise
